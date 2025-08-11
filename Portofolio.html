@@ -1,104 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Joga Likith - MERN Stack Developer</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', sans-serif;
-            background: #f5f7fa;
-            color: #333;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background: linear-gradient(135deg, #1f4037, #99f2c8);
-            color: white;
-            padding: 2.5rem 2rem;
-            text-align: center;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-        }
-        header p {
-            font-size: 1.1rem;
-            margin-top: 8px;
-        }
-        section {
-            max-width: 900px;
-            margin: auto;
-            padding: 2rem;
-        }
-        h2 {
-            border-left: 5px solid #1f4037;
-            padding-left: 10px;
-            color: #1f4037;
-            margin-top: 40px;
-        }
-        .info-line {
-            margin: 0.5rem 0;
-            font-size: 1rem;
-        }
-        .skills span, .certificates span {
-            display: inline-block;
-            background: #e0f7f4;
-            margin: 5px;
-            padding: 8px 12px;
-            border-radius: 5px;
-            font-size: 0.95rem;
-        }
-        footer {
-            background: #1f4037;
-            color: white;
-            text-align: center;
-            padding: 1rem;
-            margin-top: 3rem;
-        }
-        .project {
-            margin: 15px 0;
-            padding: 1rem;
-            background: white;
-            border-left: 4px solid #1f4037;
-            border-radius: 5px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Joga Likith – MERN Stack & React JS Developer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Reset and basic styles */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+      color: #222;
+      min-height: 100vh;
+      padding-bottom: 48px;
+    }
+
+    header {
+      background: #222;
+      color: #fff;
+      padding: 36px 0 24px 0;
+      text-align: center;
+      border-bottom-left-radius: 32px;
+      border-bottom-right-radius: 32px;
+    }
+    header h1 { font-size: 2.5rem; margin-bottom: 8px; letter-spacing: 1px;}
+    header h3 { color: #90caf9; font-weight: 400; margin-bottom: 14px; }
+    .contact-links a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 10px;
+      font-size: 1.1rem;
+      transition: color 0.2s;
+    }
+    .contact-links a:hover { color: #ffd54f; }
+
+    section {
+      width: 95%;
+      max-width: 900px;
+      margin: 42px auto 18px auto;
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.1);
+      padding: 36px 30px 24px 30px;
+      margin-bottom: 27px;
+    }
+    h2 { color: #0288d1; margin-bottom: 18px; font-size: 1.45rem; letter-spacing: 0.5px; }
+    ul { list-style: none; }
+    li { margin-bottom: 7px; }
+
+    /* Table Styles */
+    table { width: 100%; border-collapse: collapse; margin-bottom: 10px; }
+    th, td { padding: 12px 6px; text-align: left; border-bottom: 1px solid #f0f0f0;}
+    th { background: #f7f7f7; color: #0288d1;}
+    tr:last-child td { border-bottom: none; }
+
+    /* Skills styling */
+    .skills-list {
+      display: flex; flex-wrap: wrap; gap: 10px;
+    }
+    .skill {
+      background: #e1f5fe;
+      color: #01579b;
+      padding: 6px 12px;
+      border-radius: 14px;
+      font-size: 0.97rem;
+    }
+
+    /* Project Highlight */
+    .project {
+      margin-bottom: 20px;
+    }
+    .project-title {
+      font-weight: bold; color: #00695c; font-size: 1.07rem;
+      margin-bottom: 3px;
+    }
+    .project-desc {
+      color: #444; margin-bottom: 2px;
+    }
+
+    /* Responsive design */
+    @media (max-width:600px) {
+      section { padding:18px 8px; }
+      header { padding: 22px 0; }
+      h1 { font-size: 1.5rem;}
+    }
+
+    /* Button styling */
+    .button {
+      display: inline-block;
+      background: #0288d1;
+      color: #fff;
+      padding: 10px 24px;
+      border: none;
+      border-radius: 24px;
+      font-size: 1.08rem;
+      margin-top: 25px;
+      text-decoration: none;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(2,136,209,0.09);
+      transition: background 0.2s;
+    }
+    .button:hover { background: #0277bd; }
+
+    /* Interests */
+    .interest-tag {
+      background: #ffe082;
+      color: #7c6f00;
+      display: inline-block;
+      margin-right: 10px;
+      margin-bottom: 7px;
+      padding: 4px 14px;
+      border-radius: 12px;
+      font-size: 0.96rem;
+    }
+  </style>
 </head>
 <body>
-
-<header>
+  <header>
     <h1>Joga Likith</h1>
-    <p>React JS & MERN Stack Developer | Visakhapatnam, India</p>
-    <p>Email: <a href="mailto:Likithjv12@gmail.com" style="color:#fff;">Likithjv12@gmail.com</a> | Phone: +91 8309857199</p>
-    <p><a href="https://linkedin.com/in/likith-joga-737727156/" target="_blank" style="color:#fff;">LinkedIn Profile</a></p>
-</header>
+    <h3>MERN Stack & React JS Developer</h3>
+    <div class="contact-links">
+      <a href="mailto:Likithjv12@gmail.com">Likithjv12@gmail.com</a> |
+      <a href="tel:+918309857199">+91 8309857199</a> |
+      <a href="https://linkedin.com/in/likith-joga-737727156/" target="_blank">LinkedIn</a>
+      <span> | Visakhapatnam, India</span>
+    </div>
+  </header>
 
-<section>
+  <section>
     <h2>About Me</h2>
-    <p class="info-line">Passionate React JS Developer experienced in building responsive, high-performance web apps with the MERN stack. Skilled in scalable front-end design, secure back-end integration, modern UI/UX practices, and Agile teamwork.</p>
-    
+    <p>
+      Passionate <strong>React JS Developer</strong> with expertise in building responsive, high-performance web applications using the <strong>MERN stack</strong>.
+      Skilled at crafting scalable front-end solutions and integrating secure, efficient back-end services within Agile development teams.
+    </p>
+  </section>
+<section>
     <h2>Education</h2>
-    <p class="info-line"><strong>M.E. Computer Science</strong> – GITAM University, 7.79 CGPA (2023)</p>
-    <p class="info-line"><strong>B.Tech CSE</strong> – ANITS College, 5.86 CGPA (2020)</p>
-    <p class="info-line"><strong>Class XII</strong> – Bhasyam Junior College, 76% (2016)</p>
-    <p class="info-line"><strong>Class X</strong> – Ramakrishna Public School, 7.7 CGPA (2014)</p>
+    <p><strong>Master of Engineering in Computer Science</strong> from GITAM University, Visakhapatnam — CGPA: 7.79 (2023)</p><br>
+    <p><strong>Bachelor of Technology in CSE</strong> from Anil Neerukonda Institute of Technology and Sciences, Visakhapatnam — CGPA: 5.86 (2020)</p><br>
+    <p><strong>Class XII (BIEAP)</strong> from Bhasyam Junior College, Visakhapatnam — 76% (2016)</p><br>
+    <p><strong>Class X (BSEAP)</strong> from Ramakrishna Public School, Visakhapatnam — CGPA: 7.7 (2014)</p>
+</section>
 
+
+  <section>
     <h2>Technical Skills</h2>
-    <div class="skills">
-        <span>React.js</span><span>JavaScript</span><span>Node.js</span><span>Express.js</span>
-        <span>MongoDB</span><span>SQL</span><span>PHP</span><span>Python</span>
-        <span>Firebase</span><span>HTML5</span><span>CSS3</span><span>Git & GitHub</span>
+    <div class="skills-list">
+      <span class="skill">JavaScript</span>
+      <span class="skill">React.js</span>
+      <span class="skill">Node.js</span>
+      <span class="skill">Express.js</span>
+      <span class="skill">MongoDB</span>
+      <span class="skill">SQL</span>
+      <span class="skill">Firebase</span>
+      <span class="skill">HTML5</span>
+      <span class="skill">CSS3</span>
+      <span class="skill">Python</span>
+      <span class="skill">PHP</span>
+      <span class="skill">Git</span>
+      <span class="skill">GitHub</span>
+      <span class="skill">Postman</span>
+      <span class="skill">Render</span>
+      <span class="skill">Agile</span>
+      <span class="skill">Cloud Deployment</span>
     </div>
+  </section>
 
+  <section>
     <h2>Certifications</h2>
-    <div class="certificates">
-        <span>Machine Learning (Coursera)</span>
-        <span>MERN Full Stack (Elearn InfoTech)</span>
-        <span>SDE Intern (PixelVide)</span>
-    </div>
-
-    <h2>Experience</h2>
-    <p class="info-line"><strong>MERN Full Stack Intern</strong> – Elearn InfoTech (Jan 2024 – May 2024)</p>
     <ul>
-        <li>Developed responsive SPAs with React.js & Bootstrap.</li>
+      <li>Machine Learning – Coursera</li>
+      <li>MERN Full Stack – Elearn InfoTech</li>
+      <li>SDE Intern – PixelVide</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Experience</h2>
+    <div>
+      <div class="project">
+        <div class="project-title">MERN Full Stack Intern – Elearn InfoTech, India (Jan 2024 – May 2024)</div>
+        <div class="project-desc">
+          - Designed high-performance, responsive SPAs using React.js.<br>
+          - Built interactive web interfaces with HTML5, CSS3, JavaScript, Bootstrap.<br>
+          - Developed scalable backend with Node.js, Express.js, MongoDB.<br>
+          - Conducted API testing with Postman, collaborated in Agile teams using Git/GitHub.<br>
+        </div>
+      </div>
+      <div class="project">
+        <div class="project-title">Software Development Intern – PixelVide, Hyderabad (Oct 2023 – Feb 2024)</div>
+        <div class="project-desc">
+          - Developed responsive apps for multiple platforms (mobile, desktop, smart TV).<br>
+          - Achieved 90%+ device compatibility.<br>
+          - Deployed applications on Git/cloud.<br>
+          - Integrated secure RESTful APIs with token authentication.<br>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Projects</h2>
+    <div class="project">
+      <div class="project-title">Driver Drowsiness Detection for Non 2-Wheelers</div>
+      <div class="project-desc">
+        - Real-time Python/computer vision system to detect driver drowsiness and alert for safety.
+      </div>
+    </div>
+    <div class="project">
+      <div class="project-title">E-Voting System with Face & Fingerprint Authentication</div>
+      <div class="project-desc">
+        - Secure web-based e-voting with face/fingerprint verification (JavaScript).<br>
+        - Achieved 78% accuracy in test environments.
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Interests</h2>
+    <span class="interest-tag">Cricket</span>
+    <span class="interest-tag">Football</span>
+    <span class="interest-tag">Driving</span>
+  </section>
+
+  <section>
+    <h2>Let's Connect!</h2>
+    <p>
+      If you're seeking a driven MERN Stack or React JS developer eager to tackle new challenges, modernize web applications, or strengthen your Agile team, let's connect!
+    </p>
+    <a href="mailto:Likithjv12@gmail.com" class="button">Contact Me</a>
+  </section>
+
+  <script>
+    // You may enhance this with smooth scrolling or animation.
+    // Example: highlight the active section on scroll in future upgrades.
+  </script>
+</body>
+</html>
